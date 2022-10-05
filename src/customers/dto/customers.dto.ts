@@ -22,6 +22,12 @@ export class CustomerDTO {
 
     dto.firstName = obj.firstName;
     dto.lastName = obj.lastName;
+    dto.email = obj.email;
+    dto.address = obj.address;
+    dto.city = obj.city;
+    dto.postcode = obj.postcode;
+    dto.state = obj.state;
+    dto.paymentDueDate = obj.paymentDueDate;
 
     return dto;
   }

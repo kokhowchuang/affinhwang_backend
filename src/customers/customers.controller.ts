@@ -27,7 +27,7 @@ export class CustomersController {
     );
 
     if (!customer) {
-      throw new HttpException('404', 404);
+      throw new HttpException('User not found!', 404);
     }
     return CustomerDTO.fromModel(customer);
   }
@@ -50,7 +50,7 @@ export class CustomersController {
       await this.customersService.updateCustomer(id, body);
 
     if (!customer) {
-      throw new HttpException('400', 400);
+      throw new HttpException('Failed to update user! User not existed.', 404);
     }
     return CustomerDTO.fromModel(customer);
   }
@@ -60,7 +60,7 @@ export class CustomersController {
     const result: DeleteDTO = await this.customersService.deleteCustomer(id);
 
     if (!result.deletedCount) {
-      throw new HttpException('404', 404);
+      throw new HttpException('Failed to delete user! User not existed.', 404);
     }
 
     return true;
