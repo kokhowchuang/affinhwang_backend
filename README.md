@@ -26,6 +26,11 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## MongoDB Connection
+```bash
+MONGODB_ENDPOINT=mongodb+srv://affinhwang:pYCZN1iN2qQEw7Ry@cluster0.4p11qyy.mongodb.net/test
+```
+
 ## Installation
 
 ```bash
